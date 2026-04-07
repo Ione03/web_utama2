@@ -1,13 +1,13 @@
 import { component$, useStore, useSignal, useVisibleTask$, type ClassList } from "@builder.io/qwik";
 // useContext
 // import { useNavigate, useLocation } from '@builder.io/qwik-city';
-import { ModalForm } from "../modalForm";
+import { ModalForm } from "~/components/modalForm";
 import { contentApi } from "~/services/api";
 // import { GlobalContext } from "~/services/global-context";
 
 
-export const LogoText = component$((props: { class?: ClassList }) => {
-  const code = useSignal("HyqVxkdtp9iT5s7fMoLVCRYaxmcyawQAhd9J7Ep9iPnsMHUWDn84eR"); // logo-text-01
+export const CopyrightText = component$((props: { class?: ClassList }) => {
+  const code = useSignal("3AfpTOUB1UhMq3K94wpS65zv71vKVCPX3kE4iR91PbRW8DEoxdwMfjGKQJdAs"); // logo-text-01
   const type = useSignal(1); // 1 = text
   const template = useSignal(1); // 1 = index template
 
@@ -44,7 +44,7 @@ export const LogoText = component$((props: { class?: ClassList }) => {
           template: template.value,
           code: code.value,
           value_type: type.value,
-          value_text: "Logo Text",
+          value_text: "All Right Reserved.",
         }).then((newData) => {
           console.log(`Created default content for ${code.value}`, newData);
           // formData.modalTitle = newData.value_text || "";

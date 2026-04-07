@@ -18,9 +18,9 @@ export const Navigation = component$<NavigationProps>(({ currentUser, onOpenLogi
         <div class="container mx-auto px-6 py-4">
           <div class="flex items-center justify-between">
             {/* Logo with Overlay */}
-            <div class="flex items-center gap-2 flex-nowrap">
+            <div class="flex items-center gap-3 flex-nowrap">
               <LogoImage />
-              <LogoText />
+              <LogoText class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent" />
             </div>
 
             {/* Desktop Menu */}
