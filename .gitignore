@@ -1,0 +1,17 @@
+media/
+staticfiles/
+node_modules/
+__pycache__/
+tmp/
+
+.env*
+*.pyc
+*.sqlite3
+
+!.env-default
+
+sendgrid.env
+
+tailwind.config.js
+package-lock.json
+package.json
