@@ -989,6 +989,19 @@ export default component$(() => {
         {/* Breaking News Ticker */}
         <BreakingNews items={breakingNews} />
 
+        {/* Loading State */}
+        {isLoadingContent.value && (
+          <div class="flex items-center justify-center py-20">
+            <div class="flex flex-col items-center gap-4">
+              <svg class="animate-spin h-12 w-12 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span class="text-slate-600 dark:text-slate-400 font-medium">Loading content...</span>
+            </div>
+          </div>
+        )}
+
         {/* Compact Masonry Grid - Slideshow + Remaining articles */}
         <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 auto-rows-[200px] gap-x-2.5 gap-y-32 mb-12">
           {/* Article Slideshow - First 5 articles in wide variant */}
